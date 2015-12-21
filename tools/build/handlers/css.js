@@ -6,7 +6,7 @@ const postcss = require('postcss');
 
 function build() {
   exec('mkdir -p dist/assets/css', (error, stdout, stderr) => {
-    fs.readFile('src/assets/scss/styles.scss', (err, css) => {
+    fs.readFile('src/assets/css/styles.css', (err, css) => {
       if (err) {
         console.log('error reading file');
         return;
@@ -19,7 +19,7 @@ function build() {
           require('cssnano')
         ])
         .process(css, {
-          from: 'src/assets/scss/styles.scss',
+          from: 'src/assets/css/styles.css',
           to: 'dist/assets/css/styles.css'
         })
         .then((result) => {

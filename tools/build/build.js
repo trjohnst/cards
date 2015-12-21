@@ -4,6 +4,6 @@ const jsHandler = require('./handlers/js');
 
 jsHandler.build();
 
-const scssHandler = require('./handlers/scss');
+const cssHandler = require('./handlers/css');
 
-scssHandler.build();
+cssHandler.build();
