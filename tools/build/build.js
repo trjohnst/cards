@@ -2,5 +2,8 @@
 
 const jsHandler = require('./handlers/js');
 
-jsHandler.clean();
 jsHandler.build();
+
+const scssHandler = require('./handlers/scss');
+
+scssHandler.build();

@@ -13,6 +13,6 @@
   },
   "devDependencies": {
     "browserify": "12.0.1",
-    "node-watch": "0.3.5"
+    "node-sass": "3.4.2"
   }
 }

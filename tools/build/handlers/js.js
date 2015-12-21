@@ -2,7 +2,6 @@
 
 const fs = require("fs");
 const browserify = require("browserify");
-const util = require('util')
 const exec = require('child_process').exec;
 
 
@@ -15,12 +14,7 @@ function build() {
   });
 }
 
-function clean() {
-  fs.unlink('dist/assets/js/app.js');
-}
-
 module.exports = Object.freeze({
   build,
-  clean,
 });
 
