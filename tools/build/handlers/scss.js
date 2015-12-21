@@ -1,38 +1,33 @@
 'use strict';
 
 const fs = require("fs");
-const sass = require('node-sass');
 const exec = require('child_process').exec;
-// const postcss = require('postcss');
+const postcss = require('postcss');
 
 function build() {
   exec('mkdir -p dist/assets/css', (error, stdout, stderr) => {
-    sass.render({
-      file: 'src/assets/scss/styles.scss',
-      outFile: 'dist/assets/css/styles.css'
-    }, (error, result) => {
-      if (error) {
-        console.log('scss build: error with sass.render');
+    fs.readFile('src/assets/scss/styles.scss', (err, css) => {
+      if (err) {
+        console.log('error reading file');
         return;
       }
 
-      // postcss([ require('autoprefixer'), require('cssnano') ])
-      //     .process(css, {
-      //       from: 'src/app.css',
-      //       to: 'dist/assets/css/styles.css',
-      //     })
-      //     .then((result) => {
-      //         fs.writeFileSync('dist/assets/css/styles.css', result.css);
-      //         if ( result.map ) {
-      //           fs.writeFileSync('dist/assets/css/styles.css.map', result.map);
-      //         }
-      //     });
-
-      fs.writeFile('dist/assets/css/styles.css', result.css, (err) => {
-        if (err) {
-          console.log('scss build: error with fs.writefile');
-        }
-      });
+      postcss([
+          require('autoprefixer'),
+          require('postcss-simple-vars'),
+          require('postcss-nested'),
+          require('cssnano')
+        ])
+        .process(css, {
+          from: 'src/assets/scss/styles.scss',
+          to: 'dist/assets/css/styles.css'
+        })
+        .then((result) => {
+          fs.writeFileSync('dist/assets/css/styles.css', result.css);
+          if ( result.map ) {
+            fs.writeFileSync('dist/assets/css/styles.css.map', result.map);
+          }
+        });
     });
   });
 }
