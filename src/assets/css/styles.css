@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#card-container {
+  position: absolute;
+  left: 300px;
+  top: 100px;
+}
+
+.card-face {
+  height: 500px;
+  width: 375px;
+
+  position: absolute;
+}
+
+#outside-front {
+  background-color: red;
+  z-index: 4;
+}
+#inside-left {
+  background-color: gray;
+  z-index: 3;
+}
+#inside-right {
+  background-color: green;
+  z-index: 2;
+}
+#outside-back {
+  background-color: blue;
+  z-index: 1;
+}
