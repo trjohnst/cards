@@ -1,7 +1,5 @@
-$number: 0;
-
 * {
-  margin: $number;
+  margin: 0;
   padding: 0;
 }
 
