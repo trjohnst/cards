@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  background-color: #151E2F;
+}
+
 #card-container {
   position: absolute;
   left: 150px;
@@ -31,20 +35,22 @@
 .card-face {
   height: 300px;
   width: 200px;
+  border-left: 1px solid black;
 
   position: absolute;
   backface-visibility: hidden;
+  overflow:hidden;
 }
 
 #front-outer {
-  background-color: red;
+  background-color: white;
   z-index: 3;
 
   transition: 1s ease-in-out;
   transform-origin: 0 0 0;
 }
 #front-inner {
-  background-color: green;
+  background-color: white;
   z-index: 5;
   transform: rotateX(180deg);
 
@@ -52,9 +58,15 @@
   transform-origin: 0 50% 0;
 }
 #back-inner {
-  background-color: blue;
+  background-color: white;
   z-index: 1;
 
   transition: 1s ease-in-out;
   transform-origin: 0 0 0;
+
+  .text {
+    margin: 12px 10px;
+    font-size: 12px;
+    font-family: Helvetica;
+  }
 }
