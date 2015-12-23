@@ -6,10 +6,10 @@ html {
 #card-container {
   position: relative;
   margin: 0 auto;
-  top: 50px;
+  top: 120px;
 
-  height: 300px;
-  width: 200px;
+  height: 450px;
+  width: 320px;
 }
 
 .card-face {

@@ -1,3 +1,7 @@
+#front-outer .image {
+  width: 100%;
+}
+
 #back-inner .text {
   margin: 12px 10px;
   font-size: 12px;
