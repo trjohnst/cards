@@ -31,10 +31,4 @@ html {
 #back-inner {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
-
-  .text {
-    margin: 12px 10px;
-    font-size: 12px;
-    font-family: Helvetica;
-  }
 }
