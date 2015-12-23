@@ -1,16 +1,20 @@
 html {
   background-color: #151E2F;
+  width: 100%;
 }
 
 #card-container {
-  position: absolute;
-  left: 150px;
-  top: 100px;
+  position: relative;
+  margin: 0 auto;
+  top: 50px;
+
+  height: 300px;
+  width: 200px;
 }
 
 .card-face {
-  height: 300px;
-  width: 200px;
+  height: inherit;
+  width: inherit;
   border-left: 1px solid black;
 
   position: absolute;
