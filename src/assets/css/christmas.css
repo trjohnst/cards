@@ -47,17 +47,25 @@
   border: 1px solid #15154C;
 }
 
-.text section {
-  font-family: cursive;
-  overflow: hidden;
-  font-size: 12px;
-  line-height: 14px;
-  margin-bottom: 5px;
-}
+.text {
+  padding: 14px;
 
-.text section:nth-child(even) {
-  float: right;
-}
-.text section:nth-child(odd) {
-  float: left;
+  #back-inner & {
+    margin: 0;
+  }
+
+  section {
+    font-family: cursive;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  section:nth-child(even) {
+    float: right;
+  }
+  section:nth-child(odd) {
+    float: left;
+  }
 }
