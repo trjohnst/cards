@@ -1,0 +1,31 @@
+@import "./_reset.css";
+@import "./_styles.css";
+@import "./_card-open.css";
+
+#front-outer .image {
+  height: 100%;
+  float: right;
+}
+
+#back-inner .text {
+  margin: 12px 10px;
+}
+
+#front-outer {
+  border: 1px solid #15154C;
+}
+
+.text section {
+  font-family: cursive;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 5px;
+}
+
+.text section:nth-child(even) {
+  float: right;
+}
+.text section:nth-child(odd) {
+  float: left;
+}
