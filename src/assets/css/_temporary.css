@@ -2,6 +2,7 @@
   width: 100%;
 }
 
+#front-inner .text,
 #back-inner .text {
   margin: 12px 10px;
   font-size: 12px;
