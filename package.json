@@ -12,15 +12,6 @@
     "jquery": "2.1.4"
   },
   "devDependencies": {
-    "browserify": "12.0.1",
-    "babelify": "7.2.0",
-    "babel-preset-es2015": "6.3.13",
-    "postcss": "5.0.13",
-    "postcss-scss": "0.1.3",
-    "postcss-simple-vars": "1.1.0",
-    "postcss-nested": "1.0.0",
-    "postcss-import": "7.1.3",
-    "autoprefixer": "6.2.0",
-    "cssnano": "3.4.0"
+    "build": "https://github.com/trjohnst/build.git#a0909f756bb0852048cd25ea539775953a8d9e15"
   }
 }
