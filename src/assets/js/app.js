@@ -1,3 +1,5 @@
 'use strict';
 
-console.log('hi');
+import other from './other';
+
+console.log(other.text);
